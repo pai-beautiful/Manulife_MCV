@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>Manulife签单标准化流程（MCV Case）</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: #f6fffa;
+      color: #2e5939;
+    }
+    h1 {
+      text-align: center;
+      color: #2e7d32;
+    }
+    h2 {
+      border-left: 5px solid #66bb6a;
+      padding-left: 10px;
+      color: #2e7d32;
+    }
+    .section {
+      margin-top: 30px;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(46, 125, 50, 0.05);
+    }
+    .progress-container {
+      background-color: #dcedc8;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 20px;
+      margin-bottom: 15px;
+    }
+    .progress-bar {
+      height: 100%;
+      background-color: #66bb6a;
+      width: 0%;
+      transition: width 0.3s ease;
+      text-align: center;
+      color: white;
+      font-size: 12px;
+      line-height: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #c8e6c9;
+      text-align: left;
+    }
+    th {
+      background-color: #e8f5e9;
+    }
+    td input[type="checkbox"] {
+      transform: scale(1.2);
+    }
+    a {
+      color: #388e3c;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    input[type="text"] {
+      padding: 6px;
+      margin-top: 5px;
+      width: 60%;
+      border: 1px solid #a5d6a7;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 5px;
+      padding: 6px 10px;
+      border: none;
+      background-color: #66bb6a;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #4caf50;
+    }
+    .highlight {
+      background: #f1f8e9;
+      font-weight: bold;
+      color: #33691e;
+    }
+  </style>
+</head>
+<body>
+    <!-- 公司 Logo -->
+  <div style="text-align: center; margin-bottom: 20px;">
+    <img src="kaiser logo.jpg" alt="公司 Logo" >
+  </div>
+
+  <h1>Manulife签单标准化流程（MCV Case）</h1>
+
+  <div class="section">
+    <h2>📊 完成进度</h2>
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar">0%</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🧾 三证（准备材料）</h2>
+    <ul>
+      <li><input type="checkbox" class="item"> 内地身份证</li>
+      <li><input type="checkbox" class="item"> 港澳通行证</li>
+      <li><input type="checkbox" class="item"> 入境纸</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📎 文件列表（可下载）</h2>
+    <table>
+      <thead>
+        <tr><th>事项</th><th>文件</th><th>是否完成</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>嘉信隐私协议（两份）</td><td><a href="嘉信服务协议.pdf" download>下载</a></td><td><input type="checkbox" class="item"></td></tr>
+        <tr><td>嘉信服务协议（两份）</td><td><a href="嘉信私隐政策声明250325.pdf" download>下载</a></td><td><input type="checkbox" class="item"></td></tr>
+        <tr class="highlight"><td colspan="2">🔶 MCV认证（重点步骤）</td><td><input type="checkbox" class="item"></td></tr>
+        <tr><td>新生意投保申请书 B03S</td><td><a href="投保表单Manulife/B03S.pdf" download>下载</a></td><td><input type="checkbox" class="item"></td></tr>
+        <tr><td>FNA</td><td><a href="投保表单Manulife/宏利/FNA_G_CHI+(092024)(fillable) (002).pdf" download>下载</a></td><td><input type="checkbox" class="item"></td></tr>
+        <tr><td>非香港居民声明 MCV001</td><td><a href="投保表单Manulife/宏利/MCV001+(112024).pdf" download>下载</a></td><td><input type="checkbox" class="item"></td></tr>
+        <tr><td>重要资料声明书 IFS-MP</td><td><a href="投保表单Manulife/宏利/IFS_MP(102022) (002).pdf" download>下载</a></td><td><input type="checkbox" class="item"></td></tr>
+        <tr><td>DDA（如需）</td><td><a href="投保表单Manulife/宏利/T19_DDA+(07-2024).pdf" download>下载</a></td><td><input type="checkbox" class="item"></td></tr>
+        <tr><td>预缴单（如需）</td><td><a href="投保表单Manulife/宏利/Advanced_premium_form_HK_Brokerage (012025)(fillable)(1).pdf" download>下载</a></td><td><input type="checkbox" class="item"></td></tr>
+        <tr><td>特别申请表 RC01</td><td><a href="投保表单Manulife/宏利/RC01_Special+Request+for+Hard+Copy+Policy+Contract+Jan_2024_Broker(2025).pdf" download>下载</a></td><td><input type="checkbox" class="item"></td></tr>
+        <tr><td>补充资料声明 Form 856（两份）</td><td><a href="投保表单Manulife/宏利/Form856(032022).pdf" download>下载</a></td><td><input type="checkbox" class="item"></td></tr>
+        <tr><td>财政问卷（如需）U01</td><td><a href="投保表单Manulife/宏利/U01_Financial+Questionnaire+(09-2021).pdf" download>下载</a></td><td><input type="checkbox" class="item"></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🔐 宏利系统登录信息</h2>
+    <table>
+      <tr><th>公司</th><td>宏利</td></tr>
+      <tr><th>系统</th><td>Manulife Ado System</td></tr>
+      <tr><th>登录账号</th><td><code>kaiser</code></td></tr>
+      <tr><th>登录网址</th><td><a href="https://api.hkprod.manulife.com.hk/ext/hk-ado-portal-web-app/login/broker?lang=zh_TW" target="_blank">点击进入系统</a></td></tr>
+      <tr><th>密码</th>
+        <td>
+          <span id="passwordField">••••••••</span><br>
+          <input type="text" id="nameInput" placeholder="请输入员工姓名解锁密码">
+          <button onclick="revealPassword()">确认</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    const checkboxes = document.querySelectorAll('.item');
+    const progressBar = document.getElementById('progressBar');
+
+    function updateProgress() {
+      const total = checkboxes.length;
+      const checked = [...checkboxes].filter(cb => cb.checked).length;
+      const percent = Math.round((checked / total) * 100);
+      progressBar.style.width = percent + '%';
+      progressBar.textContent = percent + '%';
+    }
+
+    checkboxes.forEach(cb => cb.addEventListener('change', updateProgress));
+    updateProgress();
+
+    function revealPassword() {
+      const inputName = document.getElementById('nameInput').value.trim().toLowerCase();
+      const passwordField = document.getElementById('passwordField');
+      const allowed = ['cathy', 'zoey', 'mandy'];
+      if (allowed.includes(inputName)) {
+        passwordField.textContent = '2411@Mali';
+      } else {
+        alert('员工名称不正确，无法查看密码。');
+      }
+    }
+  </script>
+
+</body>
+</html>

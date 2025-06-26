@@ -221,17 +221,39 @@
   <div class="section">
     <h2>🔐 Manulife建议书系统登录信息</h2>
     <table>
-      <tr><th>公司</th><td>宏利</td></tr>
+      <tr><th>公司</th><td>Manulife</td></tr>
       <tr><th>系统</th><td>Manulife Ado System</td></tr>
       <tr><th>登录账号</th><td><code>kaiser</code></td></tr>
       <tr><th>登录网址</th><td><a href="https://api.hkprod.manulife.com.hk/ext/hk-ado-portal-web-app/login/broker?lang=zh_TW" target="_blank">点击进入系统</a></td></tr>
+      <!-- 建议书系统 -->
       <tr>
         <th>密码</th>
         <td>
-          <span id="passwordField">••••••••</span>
+          <span id="proposalPassword">••••••••</span>
           <div class="password-row">
-            <input type="text" id="nameInput" placeholder="请输入密码">
-            <button onclick="revealPassword()">确认</button>
+            <input type="text" id="proposalInput" placeholder="请输入密码">
+            <button onclick="revealProposalPassword()">确认</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  
+    <div class="section">
+    <h2>🔐 MCV验证系统登录信息</h2>
+    <table>
+      <tr><th>公司</th><td>Manulife</td></tr>
+      <tr><th>系统</th><td>Manulife Ado System</td></tr>
+      <tr><th>登录账号</th><td><code>mandy.tan@kaisergroup.com</code></td></tr>
+      <tr><th>登录网址</th><td><a href="https://api.hkprod.manulife.com.hk/ext/hk-ado-portal-web-app/login/broker?lang=zh_TW" target="_blank">点击进入系统</a></td></tr>
+      <!-- MCV验证系统 -->
+      <tr>
+        <th>密码</th>
+        <td>
+          <span id="mcvPassword">••••••••</span>
+          <div class="password-row">
+            <input type="text" id="mcvInput" placeholder="请输入密码">
+            <button onclick="revealMCVPassword()">确认</button>
           </div>
         </td>
       </tr>
@@ -257,12 +279,23 @@
     checkboxes.forEach(cb => cb.addEventListener('change', updateProgress));
     updateProgress();
 
-    function revealPassword() {
-      const inputName = document.getElementById('nameInput').value.trim().toLowerCase();
-      const passwordField = document.getElementById('passwordField');
+    function revealProposalPassword() {
+      const input = document.getElementById('proposalInput').value.trim().toLowerCase();
+      const passwordSpan = document.getElementById('proposalPassword');
       const allowed = ['cathy', 'zoey', 'mandy'];
-      if (allowed.includes(inputName)) {
-        passwordField.textContent = '2411@Mali';
+      if (allowed.includes(input)) {
+        passwordSpan.textContent = '2411@Mali';
+      } else {
+        alert('不正确，无法查看密码。');
+      }
+    }
+    
+    function revealMCVPassword() {
+      const input = document.getElementById('mcvInput').value.trim().toLowerCase();
+      const passwordSpan = document.getElementById('mcvPassword');
+      const allowed = ['cathy', 'zoey', 'mandy'];
+      if (allowed.includes(input)) {
+        passwordSpan.textContent = 'Kaiser@2025'; // ✅ 改为实际 MCV 密码
       } else {
         alert('不正确，无法查看密码。');
       }

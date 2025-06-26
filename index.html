@@ -151,7 +151,7 @@
       <tr><th>密码</th>
         <td>
           <span id="passwordField">••••••••</span><br>
-          <input type="text" id="nameInput" placeholder="请输入员工姓名解锁密码">
+          <input type="text" id="nameInput" placeholder="请输入密码">
           <button onclick="revealPassword()">确认</button>
         </td>
       </tr>
@@ -180,7 +180,7 @@
       if (allowed.includes(inputName)) {
         passwordField.textContent = '2411@Mali';
       } else {
-        alert('员工名称不正确，无法查看密码。');
+        alert('不正确，无法查看密码。');
       }
     }
   </script>

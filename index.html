@@ -158,6 +158,10 @@
     </table>
   </div>
 
+  <div class="section" style="text-align: center;">
+    <button onclick="submitChecklist()">提交</button>
+  </div>
+  
   <script>
     const checkboxes = document.querySelectorAll('.item');
     const progressBar = document.getElementById('progressBar');
@@ -183,7 +187,21 @@
         alert('不正确，无法查看密码。');
       }
     }
+    
+    function submitChecklist() {
+      const incomplete = [...checkboxes].some(cb => !cb.checked);
+      if (incomplete) {
+        alert("❌ 尚有未完成项，无法提交！");
+      } else {
+        alert("✅ 提交成功！");
+        // 在这里可以加入真正的提交逻辑，如表单提交或跳转
+      }
+    }
+
+    checkboxes.forEach(cb => cb.addEventListener('change', updateProgress));
+    updateProgress();
   </script>
 
+  
 </body>
 </html>

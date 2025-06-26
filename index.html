@@ -92,6 +92,21 @@
       font-weight: bold;
       color: #33691e;
     }
+    .submit-btn {
+      font-size: 20px;
+      font-weight: bold;
+      padding: 14px 32px;
+      background-color: #43a047;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .submit-btn:hover {
+      background-color: #2e7d32;
+    }
   </style>
 </head>
 <body>
@@ -159,7 +174,7 @@
   </div>
 
   <div class="section" style="text-align: center;">
-    <button onclick="submitChecklist()">提交</button>
+    <button class="submit-btn" onclick="submitChecklist()">✅ 提交</button>
   </div>
   
   <script>

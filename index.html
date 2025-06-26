@@ -282,7 +282,7 @@
     function revealProposalPassword() {
       const input = document.getElementById('proposalInput').value.trim().toLowerCase();
       const passwordSpan = document.getElementById('proposalPassword');
-      const allowed = ['cathy', 'zoey', 'mandy'];
+      const allowed = ['cathy', 'zoey', 'mandy','queenie'];
       if (allowed.includes(input)) {
         passwordSpan.textContent = '2411@Mali';
       } else {
@@ -293,7 +293,7 @@
     function revealMCVPassword() {
       const input = document.getElementById('mcvInput').value.trim().toLowerCase();
       const passwordSpan = document.getElementById('mcvPassword');
-      const allowed = ['cathy', 'zoey', 'mandy'];
+      const allowed = ['cathy', 'zoey', 'mandy','queenie'];
       if (allowed.includes(input)) {
         passwordSpan.textContent = 'Kaiser@2025'; // ✅ 改为实际 MCV 密码
       } else {

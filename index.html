@@ -2,6 +2,7 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Manulife签单标准化流程（MCV Case）</title>
   <style>
     body {
@@ -49,11 +50,14 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 10px;
+      overflow-x: auto;
+      display: block;
     }
     th, td {
       padding: 12px;
       border: 1px solid #c8e6c9;
       text-align: left;
+      word-break: break-word;
     }
     th {
       background-color: #e8f5e9;
@@ -106,6 +110,21 @@
     }
     .submit-btn:hover {
       background-color: #2e7d32;
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      h1 {
+        font-size: 20px;
+      }
+      .submit-btn {
+        width: 100%;
+        font-size: 18px;
+      }
+      input[type="text"] {
+        width: 100%;
+      }
     }
   </style>
 </head>

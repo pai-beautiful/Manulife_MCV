@@ -58,6 +58,8 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 10px;
+      overflow-x: auto;
+      display: block;
     }
     
     th, td {
@@ -127,15 +129,6 @@
       color: #33691e;
     }
     
-    /* ✅ Logo 样式 */
-    .logo-container {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .responsive-logo {
-      max-width: 100%;
-      height: auto;
-    }
     
     /* ✅ 移动端优化 */
     @media (max-width: 600px) {
@@ -162,13 +155,20 @@
         white-space: nowrap;
       }
     }
+    .password-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+    .password-row input[type="text"] {
+      flex: 1;
+      min-width: 120px;
+    }
   </style>
 </head>
 <body>
-  <!-- 公司 Logo（响应式） -->
-  <div class="logo-container">
-    <img src="kaiser logo.jpg" alt="公司 Logo" class="responsive-logo">
-  </div>
+
 
   <h1>Manulife签单标准化流程（MCV Case）</h1>
 
@@ -218,11 +218,14 @@
       <tr><th>系统</th><td>Manulife Ado System</td></tr>
       <tr><th>登录账号</th><td><code>kaiser</code></td></tr>
       <tr><th>登录网址</th><td><a href="https://api.hkprod.manulife.com.hk/ext/hk-ado-portal-web-app/login/broker?lang=zh_TW" target="_blank">点击进入系统</a></td></tr>
-      <tr><th>密码</th>
+      <tr>
+        <th>密码</th>
         <td>
-          <span id="passwordField">••••••••</span><br>
-          <input type="text" id="nameInput" placeholder="请输入密码">
-          <button onclick="revealPassword()">确认</button>
+          <span id="passwordField">••••••••</span>
+          <div class="password-row">
+            <input type="text" id="nameInput" placeholder="请输入密码">
+            <button onclick="revealPassword()">确认</button>
+          </div>
         </td>
       </tr>
     </table>
